@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+    {% block head %}
+
+        <title>tourtoto page :: {#{ page.title | trans }#}</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">  </link>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"></link>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        
+            <style type="text/css" title="currentStyle">
+                @import "{{ asset('assets/bootstrap/css/bootstrap-responsive.min.css') }}";
+                @import "{{ asset('assets/bootstrap/css/bootstrap.min.css') }}";
+                
+                
+            </style>
+            
+            <script type="text/javascript" language="javascript" src="{{ asset('assets/jquery/jquery.js') }}"></script>
+            <script type="text/javascript" language="javascript" src="{{ asset('assets/bootstrap/js/bootstrap.min.js') }}"></script>
+            <script type="text/javascript" language="javascript" src="{{ asset('assets/js/page.default.js') }}"></script> 
+
+           <!-- Generic Setting -->
+            <script>
+                var path = "{#{ path('detacom_gui_homepage') }#}";
+            </script>
+        
+            <!-- JQuery -->
+            <script type="text/javascript">
+                
+            $(document).ready(function() {
+                
+             
+        
+                         /* Block Ready */
+                         {% block ready %}
+                         {% endblock %}
+                         /* EndBlock */
+                                             
+              
+    
+            });   
+            </script>    
+            
+    {% endblock %}
+    </head>
+   
+    
+    <body>
+
+        {% block dynamic %}
+            
+      
+   
+            
+        {% endblock %}
+        
+        
+    </body>
+</html>

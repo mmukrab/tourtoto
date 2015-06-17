@@ -1,0 +1,49 @@
+TourtotoSiteBundle\Entity\Totospelerploeg:
+    type: entity
+    table: totospelerploeg
+    indexes:
+        renner_id:
+            columns:
+                - renner_id
+        totospeler_id:
+            columns:
+                - totospeler_id
+    uniqueConstraints:
+        UCt:
+            columns:
+                - id
+                - renner_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        reserve:
+            type: boolean
+            nullable: false
+            comment: ''
+    manyToOne:
+        renner:
+            targetEntity: Renner
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                renner_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        totospeler:
+            targetEntity: Totospeler
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                totospeler_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

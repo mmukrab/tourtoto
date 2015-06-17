@@ -1,0 +1,41 @@
+TourtotoSiteBundle\Entity\Ploeg:
+    type: entity
+    table: ploeg
+    repositoryClass: TourtotoSiteBundle\Entity\PloegRepository
+    indexes:
+        land_id:
+            columns:
+                - land_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        code:
+            type: string
+            nullable: false
+            length: 12
+            fixed: false
+            comment: ''
+        naam:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+    manyToOne:
+        land:
+            targetEntity: Land
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                land_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

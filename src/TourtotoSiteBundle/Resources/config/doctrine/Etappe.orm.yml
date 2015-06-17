@@ -1,0 +1,25 @@
+TourtotoSiteBundle\Entity\Etappe:
+    type: entity
+    table: etappe
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        naam:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+        afstand:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+    lifecycleCallbacks: {  }

@@ -1,0 +1,17 @@
+<html>
+    <table border = 1>
+           <thead>
+            <tr>
+                {% for record in header %}
+                    <th>{{record}}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        {% for record in data %}
+                    {% for column in record %}
+            <td>{{column}}</td>
+            {% endfor %}
+        </tr>
+     {% endfor %}
+    </table>
+</html>

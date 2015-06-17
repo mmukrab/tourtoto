@@ -1,0 +1,57 @@
+TourtotoSiteBundle\Entity\Renner:
+    type: entity
+    table: renner
+    repositoryClass: TourtotoSiteBundle\Entity\RennerRepository
+    indexes:
+        land_id:
+            columns:
+                - land_id
+        ploeg_id:
+            columns:
+                - ploeg_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        voornaam:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+        achternaam:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+        active:
+            type: boolean
+            nullable: false
+            comment: ''
+    manyToOne:
+        land:
+            targetEntity: Land
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                land_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        ploeg:
+            targetEntity: Ploeg
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                ploeg_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

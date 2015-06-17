@@ -1,0 +1,54 @@
+TourtotoSiteBundle\Entity\Etapperegel:
+    type: entity
+    table: etapperegel
+    indexes:
+        etapperegel_ibfk_1:
+            columns:
+                - renner_id
+        IDX_78433F6B922EFE63:
+            columns:
+                - etappe_id
+    uniqueConstraints:
+        UC:
+            columns:
+                - etappe_id
+                - renner_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        positie:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+        tijd:
+            type: time
+            nullable: false
+            comment: ''
+    manyToOne:
+        renner:
+            targetEntity: Renner
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                renner_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        etappe:
+            targetEntity: Etappe
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                etappe_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

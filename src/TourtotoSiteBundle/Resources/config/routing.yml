@@ -1,0 +1,36 @@
+tourtoto_homepage:
+    path:     /
+    defaults: { _controller: TourtotoSiteBundle:Default:index }
+   
+    
+tourtoto_invoerpage:
+    path:    /invoer/{slug}
+    defaults: { _controller: TourtotoSiteBundle:Invoer:invoer}
+    
+    
+tourtoto_wijzigenpage:
+    path:   /wijzigen
+    defaults: { _controller: TourtotoSiteBundle:Default:wijzigen }
+ 
+tourtoto_printenpage:
+    path:   /renner
+    defaults: { _controller: TourtotoSiteBundle:Default:printen }
+
+tourtoto_inloggenPage:
+    path:   /login
+    defaults: { _controller: TourtotoSiteBundle:Default:inloggen }
+    
+invoer_tourtoto:
+        path: /invoer
+        defaults: { _controller: TourtotoSiteBundle:Default:invoer }
+    
+toto_invoer_opties:
+    path:    /invoer/{slug}/{id}
+    defaults: { _controller: TourtotoSiteBundle:Invoer:showForm}
+
+toto_invoer_opties2:
+    path:    /invoer/{slug}/{id}
+    defaults: { _controller: TourtotoSiteBundle:Invoer:index}
+
+ 
+ 

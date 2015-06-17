@@ -1,0 +1,17 @@
+tourtoto_site_homepage:
+    path:     /
+    defaults: { _controller: TourtotoSiteBundle:Default:index }
+    
+renner_site_homepage:
+    path:     /renner
+    defaults: { _controller: TourtotoSiteBundle:Default:printen }
+    
+ploeg_site_homepage:
+    path:     /ploeg
+    defaults: { _controller: TourtotoSiteBundle:Default:printen }
+
+output_site_homepage:
+    path:     /output
+    defaults: { _controller: TourtotoSiteBundle:Default:output }
+    
+
